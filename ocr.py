@@ -106,6 +106,7 @@ class OCR():
                 if calculate_noise_count(gray_img, _w, _h) < k:
                     gray_img.putpixel((_w, _h), 255)
         return gray_img
+        
     def convert(self, image, threshold=4):
         img = self.noise_remove_pil(image, threshold)
         img = self.heibaihua(img)
